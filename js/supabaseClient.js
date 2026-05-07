@@ -18,13 +18,19 @@ function envErrorMessage() {
 }
 
 if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
-  // Keep the module import from crashing, but ensure any DB call fails loudly.
-  console.error(envErrorMessage(), { SUPABASE_URL, SUPABASE_ANON_KEY: !!SUPABASE_ANON_KEY });
+  const msg = envErrorMessage();
+  console.error(msg, { SUPABASE_URL, SUPABASE_ANON_KEY: !!SUPABASE_ANON_KEY });
+
+  // Surface the configuration issue immediately to the UI.
+  // (Forms/pages already call window.DV.toast, but we still show a hard error if DV isn't ready.)
+  try {
+    window.__SUPABASE_CONFIG_ERROR__ = msg;
+  } catch (_) {}
 }
 
 export const supabase = createClient(
-  SUPABASE_URL || 'http://localhost',
-  SUPABASE_ANON_KEY || 'public-anon-key',
+  SUPABASE_URL,
+  SUPABASE_ANON_KEY,
   {
     auth: {
       persistSession: true,
