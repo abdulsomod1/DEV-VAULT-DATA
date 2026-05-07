@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="DEV-VAULT DATA — premium VTU & data bundles. Secure checkout, fast delivery, real-time order status." />
+  <title>DEV-VAULT DATA</title>
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/env.js"></script>
+  <script defer src="js/main.js"></script>
+  <script type="module" defer src="js/pricing.js"></script>
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <header class="topbar glass">
+    <div class="container topbar__row">
+      <a class="brand" href="#top">
+        <span class="brand__mark">DV</span>
+        <span class="brand__name">DEV-VAULT DATA</span>
+      </a>
+
+      <nav class="topnav" aria-label="Primary">
+        <a href="#about" class="topnav__link">About</a>
+        <a href="#pricing" class="topnav__link">Pricing</a>
+        <a href="#faq" class="topnav__link">FAQ</a>
+        <a href="#contact" class="topnav__link">Contact</a>
+        <a id="navDashboardLink" class="topnav__link topnav__link--cta" href="dashboard.html">Dashboard</a>
+        <button id="themeToggleTop" class="iconbtn" type="button" aria-label="Toggle theme">
+          <span class="iconbtn__icon" aria-hidden="true">☾</span>
+        </button>
+      </nav>
+
+      <button class="hamburger" type="button" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobileMenu" hidden>
+      <a href="#about" class="mobileMenu__link">About</a>
+      <a href="#pricing" class="mobileMenu__link">Pricing</a>
+      <a href="#faq" class="mobileMenu__link">FAQ</a>
+      <a href="#contact" class="mobileMenu__link">Contact</a>
+      <a class="mobileMenu__link mobileMenu__link--cta" href="dashboard.html">Dashboard</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <div class="pill">
+            <span class="pill__dot" aria-hidden="true"></span>
+            Secure • Fast • Real-time
+          </div>
+          <h1 class="hero__title">Premium VTU & Data Bundles</h1>
+          <p class="hero__subtitle">Buy MTN, Airtel & GLO data plans in seconds. Get instant order status updates — no guesswork.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="login.html">Get Started</a>
+            <a class="btn btn--ghost" href="#pricing">View Plans</a>
+          </div>
+          <div class="hero__badges">
+            <div class="miniStat"><strong>RLS Protected</strong><span>Secure DB policies</span></div>
+            <div class="miniStat"><strong>Glass UI</strong><span>Modern premium design</span></div>
+            <div class="miniStat"><strong>Realtime</strong><span>Status updates</span></div>
+          </div>
+        </div>
+
+        <div class="hero__panel glass">
+          <div class="panelHeader">
+            <div class="panelHeader__title">Live Order Preview</div>
+            <div class="panelHeader__status"><span class="pulse" aria-hidden="true"></span> Connected</div>
+          </div>
+          <div class="panelBody">
+            <div class="skeleton skeleton--line" style="width: 78%"></div>
+            <div class="skeleton skeleton--line" style="width: 56%"></div>
+            <div class="divider"></div>
+            <div class="orderPreview">
+              <div class="orderPreview__row">
+                <span class="label">Network</span>
+                <span class="value">MTN</span>
+              </div>
+              <div class="orderPreview__row">
+                <span class="label">Plan</span>
+                <span class="value">5GB • 30 Days</span>
+              </div>
+              <div class="orderPreview__row">
+                <span class="label">Phone</span>
+                <span class="value">0803••••••12</span>
+              </div>
+              <div class="orderPreview__tag">Awaiting Payment</div>
+            </div>
+          </div>
+          <div class="panelFooter">
+            <button class="btn btn--small btn--primary" type="button" id="heroTryDemo">Try Dashboard</button>
+            <div class="fineprint">No payment required for preview.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container hero__wave" aria-hidden="true"></div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="sectionHeader">
+          <h2 class="sectionTitle">Built for speed, designed for trust.</h2>
+          <p class="sectionLead">From authentication to order tracking, DEV-VAULT DATA is engineered for a smooth, secure experience.</p>
+        </div>
+
+        <div class="featureGrid">
+          <article class="card card--soft">
+            <div class="cardIcon" aria-hidden="true">🛡️</div>
+            <h3 class="cardTitle">Secure Auth & RLS</h3>
+            <p class="cardText">Supabase authentication, protected admin routes, and Row Level Security for database safety.</p>
+          </article>
+          <article class="card card--soft">
+            <div class="cardIcon" aria-hidden="true">⚡</div>
+            <h3 class="cardTitle">Fast, Smooth UI</h3>
+            <p class="cardText">Glassmorphism, gradients, skeleton loaders, modals, toasts, and smooth transitions.</p>
+          </article>
+          <article class="card card--soft">
+            <div class="cardIcon" aria-hidden="true">📡</div>
+            <h3 class="cardTitle">Realtime Order Status</h3>
+            <p class="cardText">See your order flow from pending to completed with realtime updates.</p>
+          </article>
+          <article class="card card--soft">
+            <div class="cardIcon" aria-hidden="true">📱</div>
+            <h3 class="cardTitle">Mobile-first Experience</h3>
+            <p class="cardText">Sidebar, modals, and cards are optimized for small screens without sacrificing premium feel.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="pricing">
+      <div class="container">
+        <div class="sectionHeader">
+          <h2 class="sectionTitle">Data Bundle Pricing</h2>
+          <p class="sectionLead">MTN, Airtel & GLO plans with transparent pricing and reliable delivery.</p>
+        </div>
+
+        <div class="plansTabs">
+          <button class="tabBtn is-active" type="button" data-network="MTN">MTN</button>
+          <button class="tabBtn" type="button" data-network="AIRTEL">Airtel</button>
+          <button class="tabBtn" type="button" data-network="GLO">GLO</button>
+        </div>
+
+        <div id="pricingContainer" class="plansGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="sectionHeader">
+          <h2 class="sectionTitle">Frequently Asked Questions</h2>
+          <p class="sectionLead">Everything you need to know about ordering and delivery.</p>
+        </div>
+
+        <div class="faq">
+          <details class="faqItem">
+            <summary>Do you support all Nigerian networks?</summary>
+            <p>Yes — MTN, Airtel and GLO. We validate phone prefixes automatically before continuing.</p>
+          </details>
+          <details class="faqItem">
+            <summary>How do I track my order?</summary>
+            <p>After purchasing, you’ll see real-time status changes on your dashboard as the admin processes your order.</p>
+          </details>
+          <details class="faqItem">
+            <summary>Is the site secure?</summary>
+            <p>Yes — Supabase authentication with RLS policies protects user data and admin actions.</p>
+          </details>
+          <details class="faqItem">
+            <summary>Can I use my username to login?</summary>
+            <p>Yes — login supports both email+password and username+password. Username is stored in Supabase profiles.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="testimonials">
+      <div class="container">
+        <div class="sectionHeader">
+          <h2 class="sectionTitle">Trusted by premium customers</h2>
+          <p class="sectionLead">A premium UX built for Nigerian mobile data buying.</p>
+        </div>
+
+        <div class="testGrid">
+          <article class="card">
+            <p class="quote">“Fast confirmations and the order status is always updated. Clean UI.”</p>
+            <div class="person"><span class="avatar" aria-hidden="true">A</span><div><strong>Adams</strong><span>MTN Buyer</span></div></div>
+          </article>
+          <article class="card">
+            <p class="quote">“The dashboard feels professional. Payment popup is clear and secure.”</p>
+            <div class="person"><span class="avatar" aria-hidden="true">B</span><div><strong>Bella</strong><span>Airtel Buyer</span></div></div>
+          </article>
+          <article class="card">
+            <p class="quote">“Mobile-friendly. Glass design is premium and transitions are smooth.”</p>
+            <div class="person"><span class="avatar" aria-hidden="true">C</span><div><strong>Chinedu</strong><span>GLO Buyer</span></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="sectionHeader">
+          <h2 class="sectionTitle">Contact</h2>
+          <p class="sectionLead">Need help? Send a message and we’ll respond quickly.</p>
+        </div>
+
+        <form id="contactForm" class="formCard glass" autocomplete="on">
+          <div class="formRow">
+            <label class="field">
+              <span>Name</span>
+              <input name="name" type="text" placeholder="Your name" required />
+            </label>
+            <label class="field">
+              <span>Email</span>
+              <input name="email" type="email" placeholder="you@example.com" required />
+            </label>
+          </div>
+          <label class="field">
+            <span>Message</span>
+            <textarea name="message" placeholder="How can we help?" rows="5" required></textarea>
+          </label>
+          <button class="btn btn--primary" type="submit">Send Message</button>
+          <div class="fineprint">Demo-only form (wire to DB later if needed).</div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <div class="brand brand--footer">
+          <span class="brand__mark">DV</span>
+          <span class="brand__name">DEV-VAULT DATA</span>
+        </div>
+        <p class="footerText">Premium VTU & Data Bundles. Secure checkout powered by Supabase.</p>
+      </div>
+      <div class="footerLinks">
+        <a href="#about">About</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+        <a href="login.html">Login</a>
+      </div>
+      <div class="footerMeta">
+        <div class="metaItem"><strong>Security</strong><span>RLS + Protected routes</span></div>
+        <div class="metaItem"><strong>Delivery</strong><span>Realtime order updates</span></div>
+        <div class="metaItem"><strong>Theme</strong><span>Green • Dark • Glass</span></div>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© <span id="year"></span> DEV-VAULT DATA. All rights reserved.</span>
+      <span class="footerSmall">Built for Netlify static hosting.</span>
+    </div>
+  </footer>
+
+  <!-- Toast Container -->
+  <div id="toastRoot" class="toastRoot" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Modal Root -->
+  <div id="modalRoot" class="modalRoot" aria-hidden="true"></div>
+
+  <script type="module">
+    // Lightweight event hook for hero button
+    window.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('heroTryDemo');
+      if (btn) btn.addEventListener('click', () => location.href = 'dashboard.html');
+    });
+  </script>
+</body>
+</html>
+

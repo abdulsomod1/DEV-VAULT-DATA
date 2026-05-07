@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Signup — DEV-VAULT DATA" />
+  <title>Signup — DEV-VAULT DATA</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/env.js"></script>
+  <script defer src="js/auth.js"></script>
+  <script defer src="js/main.js"></script>
+
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <header class="topbar glass">
+    <div class="container topbar__row">
+      <a class="brand" href="index.html">
+        <span class="brand__mark">DV</span>
+        <span class="brand__name">DEV-VAULT DATA</span>
+      </a>
+      <button id="themeToggle" class="iconbtn" type="button" aria-label="Toggle theme">
+        <span class="iconbtn__icon" aria-hidden="true">☾</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="authPage">
+    <div class="container authGrid">
+      <section class="authHero glass" aria-hidden="true">
+        <div class="pill pill--invert"><span class="pill__dot"></span> No email verification</div>
+        <h1 class="authTitle">Create your account</h1>
+        <p class="authText">Signup with any email without email verification. Username is stored securely in Supabase.</p>
+        <div class="authHighlights">
+          <div class="miniBullet">🛡️ Secure policies</div>
+          <div class="miniBullet">⚡ Smooth dashboard</div>
+          <div class="miniBullet">📱 Mobile-ready</div>
+        </div>
+      </section>
+
+      <section class="authCard glass">
+        <form id="signupForm" class="form" autocomplete="on">
+          <h2 class="formTitle">Signup</h2>
+
+          <label class="field">
+            <span>Username</span>
+            <input name="username" type="text" placeholder="Your username" required minlength="3" maxlength="18" />
+          </label>
+
+          <label class="field">
+            <span>Email</span>
+            <input name="email" type="email" placeholder="you@example.com" required />
+          </label>
+
+          <label class="field">
+            <span>Password</span>
+            <input name="password" type="password" placeholder="Minimum 6 characters" required minlength="6" />
+          </label>
+
+          <label class="field">
+            <span>Confirm Password</span>
+            <input name="passwordConfirm" type="password" placeholder="Repeat password" required minlength="6" />
+          </label>
+
+          <div class="row row--between">
+            <label class="check">
+              <input type="checkbox" name="agree" required checked />
+              <span>I agree to use this service responsibly</span>
+            </label>
+          </div>
+
+          <button id="signupBtn" class="btn btn--primary" type="submit">
+            <span class="btn__text">Create Account</span>
+            <span class="btnSpinner" hidden aria-hidden="true"></span>
+          </button>
+
+          <div class="formFooter">
+            <span>Already have an account?</span>
+            <a class="link" href="login.html">Login</a>
+          </div>
+
+          <div class="errorBox" id="signupError" hidden></div>
+        </form>
+
+        <div class="smallNote">Forgot password? <a class="link" href="forgot-password.html">Reset it</a>.</div>
+      </section>
+    </div>
+  </main>
+
+  <div id="toastRoot" class="toastRoot" aria-live="polite" aria-atomic="true"></div>
+  <div id="modalRoot" class="modalRoot" aria-hidden="true"></div>
+</body>
+</html>
+
