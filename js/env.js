@@ -13,12 +13,16 @@
   // Otherwise, we fall back to global variables if user configured them in index via Netlify build.
   // Users should set env vars in Netlify Site settings.
   if (!window.__ENV.SUPABASE_URL) {
-    // Netlify sometimes supports injecting via script tag using placeholders.
-    // We'll attempt common patterns.
+    // If Netlify didn't inject, allow local dev / static testing via global placeholders.
+    // (You can define these on the page before env.js loads.)
     window.__ENV.SUPABASE_URL = window.SUPABASE_URL || '';
   }
   if (!window.__ENV.SUPABASE_ANON_KEY) {
     window.__ENV.SUPABASE_ANON_KEY = window.SUPABASE_ANON_KEY || '';
   }
+
+  // Expose for debugging UI.
+  window.__ENV_LOADED__ = true;
+
 })();
 
