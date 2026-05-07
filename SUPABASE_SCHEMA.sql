@@ -116,17 +116,23 @@ as $$
   );
 $$;
 
--- Profiles policy: user can read/update own profile; admins can read
+-- Profiles policy: user can read/insert/update own profile; admins can read
 create policy "profiles_select_own_or_admin"
 on public.profiles
 for select
 using (user_id = auth.uid() or public.is_admin());
+
+create policy "profiles_insert_own"
+on public.profiles
+for insert
+with check (user_id = auth.uid());
 
 create policy "profiles_update_own"
 on public.profiles
 for update
 using (user_id = auth.uid())
 with check (user_id = auth.uid());
+
 
 -- Orders: user can CRUD own; admins can manage all
 create policy "orders_select_own_or_admin"
